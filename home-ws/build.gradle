@@ -1,0 +1,34 @@
+project.version = project.currentVersion
+
+jar {
+	baseName = project.name
+	version = project.version
+	from sourceSets.main.allSource
+}
+
+configurations {
+	providedRuntime
+}
+
+dependencies {
+	compile project (':home-service')
+	compile project (':home-dto')
+	
+	testCompile 'com.excilys.ebi.spring-dbunit:spring-dbunit-core:1.4.0'
+	testCompile 'com.excilys.ebi.spring-dbunit:spring-dbunit-test:1.4.0'
+	testCompile 'org.dbunit:dbunit:2.5.0'
+	
+	compile 'org.springframework.boot:spring-boot-starter-jersey'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: mavenLocal().url) 
+		}
+	}
+}

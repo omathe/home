@@ -1,0 +1,4 @@
+customer
+user
+role
+user_role

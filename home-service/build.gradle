@@ -1,0 +1,23 @@
+project.version = project.currentVersion
+
+jar {
+    baseName = project.name
+    version = project.version
+    from sourceSets.main.allSource
+}
+
+dependencies {
+    compile project(':home-model')
+	
+    testCompile 'com.excilys.ebi.spring-dbunit:spring-dbunit-core:1.4.0'
+    testCompile 'com.excilys.ebi.spring-dbunit:spring-dbunit-test:1.4.0'
+    testCompile 'org.dbunit:dbunit:2.5.0'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: mavenLocal().url) 
+        }
+    }
+}

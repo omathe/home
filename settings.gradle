@@ -1,2 +1,2 @@
-include 'home-model', 'home-ws', 'home-dto', 'home-commons'
+include 'home-dto', 'home-ws', 'home-service', 'home-model', 'home-commons'
 

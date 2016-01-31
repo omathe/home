@@ -1,0 +1,2 @@
+id,fleetId,serialNumber,name,equipmentGroup,latitude,longitude,type,currentIp,port
+1,1,serialNumber1 updated,name1 updated,equipmentGroup1 updated,10,10,type1 updated,currentIp1 updated,10

@@ -1,0 +1,20 @@
+project.version = project.currentVersion
+
+jar {
+	baseName = project.name
+	version = project.version
+	from sourceSets.main.allSource
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtime 'mysql:mysql-connector-java'
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: mavenLocal().url) 
+		}		
+	}
+}

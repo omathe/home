@@ -1,0 +1,15 @@
+project.version = project.currentVersion
+
+jar {
+	baseName = project.name
+	version = project.version
+	from sourceSets.main.allSource
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: mavenLocal().url) 
+		}		
+	}
+}

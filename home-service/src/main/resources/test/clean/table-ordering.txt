@@ -1,0 +1,7 @@
+customer
+role
+user
+user_role
+fleet
+customer_fleet
+equipment
